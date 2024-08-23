@@ -6,9 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 public class Member {
 
@@ -16,5 +18,8 @@ public class Member {
     private Long id;
     private String name;
 
+    public Member(String name) {
+        this.name = name;
+    }
 
 }
